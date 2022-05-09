@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <header>
+            <nav>
+                <img class="logo" src="<%= logo %>" alt="">
+                <div class="links">
+                    <a href="#"><%= about %></a>
+                    <a href="#"><%= docs %></a>
+                    <button class="button-med" href="#"><%= login %></button>
+                </div>
+
+            </nav>
+        </header>
+
+
+        <!-- Contents -->
+        <section class="info">
+            <h1 class="content-font1"><%= contentfont1 %></h1>
+            <h4 class="content-font2"><%= contentfont2 %></h4>
+            <div class="icons">
+                <div class="icon">
+                    <% obj_contents.forEach(function(contents){ %> 
+                    <img src="<%= contents.img %>" alt="email">
+                    <p class="icon-info"><%= contents.icon %></p>
+                </div>
+                <% }) %>
+            <!--    <div class="icon">
+                    <img src="images/facebook.svg" alt="facebook">
+                    <p class="icon-info">Jindarat Jari</p>
+                </div>
+                <div class="icon">
+                    <img src="images/twitter.svg" alt="twitter">
+                    <p class="icon-info">Jindarat Jari</p>
+                </div>
+                <div class="icon">
+                    <img src="images/youtube.svg" alt="youtube">
+                    <p class="icon-info">Jindarat Jari</p>
+                </div>
+            -->
+            </div>
+        </section>
+
+
+        <!-- Feature Bar -->
+        <section class="feature">
+            <div class="feature">
+                <!-- Add Parameter that forEach loop-->
+                <% obj_feature.forEach(function(feature){ %>
+                <img src="<%= feature.img %>" alt="">
+                <div class="feature-info">
+                    <p class="feature-top"><%= feature.top %></p>
+                    <p class="feature-bottm"><%= feature.bottom %></p>
+                </div>
+            </div>
+               <% }) %>
+    <!-- comment not use
+            <div class="feature">
+                <img src="images/programming.jpg" alt="">
+                <div class="feature-info">
+                    <p class="feature-top">programming</p>
+                    <p class="feature-bottom">Enjoy code </p>
+                </div>
+            </div>
+    -->
+            <div class="feature">
+                <div class="feature-info">
+                    <p class="feature-top">Lear more</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
